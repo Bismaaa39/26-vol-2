@@ -1,0 +1,125 @@
+/* Gaya dasar tetap dipertahankan dari sumber asli */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Elemen transisi background baru */
+#new-background {
+    position: fixed;
+    inset: 0;
+
+    background-image: url('assets/bg_chapter3.png');
+    background-size: cover;       
+    background-position: center;    
+    background-repeat: no-repeat;    
+    
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.show-new-bg {
+    opacity: 1 !important;
+}
+
+
+.container{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:700px;
+    text-align:center;
+}
+
+#story-text{
+    font-size:1.7rem;
+    line-height:1.8;
+    min-height:120px;
+    opacity:0;
+    transition:opacity 1s;
+}
+
+.show{
+    opacity:1 !important;
+}
+
+/* Tambahkan ini di bagian bawah file css Anda */
+
+.dialog-box {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    z-index: 10; /* Agar di atas background */
+}
+
+#speaker {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#dialogText {
+    min-height: 70px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Tombol Lanjut harus menggunakan float: right */
+#nextBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right; /* Ini yang membuat tombol di kanan bawah */
+}
+
+/* TAMBAHAN: Style Game Objek */
+#object-container {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+}
+
+.clickable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: none; /* TAMBAHAN: Sembunyikan semua objek pada awalnya */
+}
+
+/* Animasi Glow (Hint) */
+.pulse-effect {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)) brightness(1); }
+    100% { filter: drop-shadow(0 0 60px rgba(255, 255, 255, 1)) brightness(1.3); }
+}

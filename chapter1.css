@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:black;
+    overflow:hidden;
+}
+
+#game{
+    width:100%;
+    height:100vh;
+    position:relative;
+}
+
+/* IMAGE */
+
+.scene-image{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:1;
+
+    transition:opacity 1s ease;
+}
+
+.fade-out{
+    opacity:0;
+}
+
+/* DARK OVERLAY */
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.1)
+    );
+}
+
+/* DIALOG */
+
+.dialog-box{
+
+    position:absolute;
+
+    left:50%;
+    bottom:20px;
+
+    transform:translateX(-50%);
+
+    width:92%;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    color:white;
+}
+
+#speaker{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+#dialogText{
+    min-height:70px;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+#nextBtn{
+
+    margin-top:15px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    float:right;
+}
+
+#btnNextChapter{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#fff;
+    color:#000;
+    cursor:pointer;
+    font-weight:bold;
+    float:right;
+}
+
+/* CHOICE */
+
+#choiceContainer{
+
+    display:none;
+
+    position:absolute;
+
+    left:50%;
+    top:80%;
+
+    transform:translate(-50%,-50%);
+
+    width:85%;
+
+    max-width:400px;
+
+    z-index:20;
+
+    
+}
+
+.choice{
+
+    width:100%;
+
+    padding:16px;
+
+    margin:10px 0;
+
+    border:none;
+
+    border-radius:15px;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+}

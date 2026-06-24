@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 - Momen-Momen Kecil</title>
+    <link rel="stylesheet" href="chapter4.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="text-container">
+            <p id="story-text"></p>
+        </div>
+    </div>
+
+    <!-- Elemen untuk latar belakang dinamis -->
+    <div id="new-background"></div>
+
+    <!-- Elemen untuk foto/kenangan -->
+    <div id="object-container" style="display: none;">
+        <img src="assets/memori_foto.png" id="item-foto" class="memory-item" alt="Foto Pertama">
+        <img src="assets/memori_ultah.jpg" id="item-ultah" class="memory-item" alt="Ulang Tahun">
+        <img src="assets/memori_hadiah.jpg" id="item-hadiah" class="memory-item" alt="Hadiah Pertama">
+        <img src="assets/memori_lagu.jpg" id="item-lagu" class="memory-item" alt="Lagu Favorit">
+    </div>
+
+    <!-- Kotak Dialog Utama -->
+    <div class="dialog-box" id="dialogBox" style="display: none;">
+        <div id="speaker">Narasi-Pupu</div>
+        <div id="dialogText"></div>
+        <button id="nextBtn">▶ Lanjut</button>
+    </div>
+
+    <script src="chapter4.js"></script>
+</body>
+</html>

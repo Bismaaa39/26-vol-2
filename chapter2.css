@@ -1,0 +1,48 @@
+*{ margin:0; padding:0; box-sizing:border-box; font-family:"Segoe UI",sans-serif; }
+body{ background:black; overflow:hidden; }
+#game{ width:100%; height:100vh; position:relative; }
+
+/* IMAGE & OVERLAY */
+.scene-image{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:1; transition:opacity 1s ease; }
+.fade-out{ opacity:0; }
+.overlay{ position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.1)); }
+
+/* DIALOG */
+.dialog-box{ position:absolute; left:50%; bottom:20px; transform:translateX(-50%); width:92%; background:rgba(0,0,0,.65); backdrop-filter:blur(12px); border-radius:20px; padding:20px; color:white; z-index:100; }
+#speaker{ font-weight:bold; margin-bottom:10px; }
+#dialogText{ min-height:70px; line-height:1.8; font-size:1.1rem; }
+#nextBtn, #btnNextChapter, .btn-check{ margin-top:15px; padding:10px 20px; border:none; border-radius:10px; background:#fff; color:#000; cursor:pointer; font-weight:bold; float:right; }
+
+/* GAME AREA */
+#game-container{ position:absolute; top:20%; left:50%; transform:translateX(-50%); width:90%; z-index:50; display:flex; flex-direction:column; align-items:center; }
+.drag-zone, .drop-zone{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:20px; }
+.drop-zone{ border:3px dashed #fff; padding:20px; border-radius:20px; min-height:150px; width:100%; align-content: center; }
+
+/* CHAT BUBBLE */
+.chat-bubble { background: #007bff; color: white; padding: 15px 20px; border-radius: 15px; cursor: grab; user-select: none; font-size: 1rem; margin: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+.chat-bubble:active { cursor: grabbing; }
+
+/* Styling Prolog */
+#prolog-screen {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 2s ease; /* Transisi fade out lambat */
+}
+
+#prolog-text {
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+}
+
+.prolog-fade-out {
+    opacity: 0;
+    pointer-events: none;
+}

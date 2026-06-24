@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2 - Chat Lewat Teman</title>
+    <link rel="stylesheet" href="chapter2.css">
+</head>
+<body>
+
+    <div id="prolog-screen">
+        <p id="prolog-text"></p>
+    </div>
+
+    <div id="game">
+        <img id="sceneImage" class="scene-image" src="assets/scene_narrative.png" alt="scene">
+        <div class="overlay"></div>
+
+        <div id="game-container" style="display:none;">
+            <div id="source-container" class="drag-zone"></div>
+            <div id="drop-container" class="drop-zone"></div>
+            <button id="checkBtn" class="btn-check">Cek Urutan</button>
+        </div>
+
+        <div class="dialog-box">
+            <div id="speaker">Narasi-Pupu</div>
+            <div id="dialogText"></div>
+            <button id="nextBtn">▶ Lanjut</button>
+            <button id="btnNextChapter" style="display:none">Lanjut ke Chapter 3 ➔</button>
+        </div>
+    </div>
+
+    <script src="chapter2.js"></script>
+</body>
+</html>

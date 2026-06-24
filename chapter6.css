@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #000;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Transisi Latar Belakang */
+#new-background {
+    position: fixed;
+    inset: 0;
+    background-size: cover;       
+    background-position: center;    
+    background-repeat: no-repeat;    
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.show-new-bg {
+    opacity: 1 !important;
+}
+
+/* Wadah Teks Prolog */
+.container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+}
+
+#story-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    min-height: 120px;
+    opacity: 0;
+    transition: opacity 1s;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.show {
+    opacity: 1 !important;
+}
+
+/* Kotak Dialog */
+.dialog-box {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    z-index: 10;
+}
+
+#speaker {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffca28;
+}
+
+#dialogText {
+    min-height: 70px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+#nextBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    float: right;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#nextBtn:hover {
+    background-color: #ddd;
+}
+
+/* Area Teka-Teki */
+#puzzle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    height: 60vh;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#line-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Agar tidak menghalangi interaksi klik */
+}
+
+.nodes-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+}
+
+.node-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.node-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.node {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    transition: 0.3s ease;
+}
+
+.problem-node {
+    background: #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.problem-node:hover {
+    transform: scale(1.2);
+    background: #777;
+}
+
+.solution-node {
+    background: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.node.solved {
+    background: #4caf50 !important;
+    box-shadow: 0 0 20px #4caf50 !important;
+    pointer-events: none;
+}
+
+.problem-node.solved + .node-label,
+.node-label.solved-label {
+    color: #4caf50;
+    transition: 0.5s;
+}
+
+/* Notifikasi Poin Kepercayaan */
+#trust-notif {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5252;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 82, 82, 0.5);
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.5s ease-out;
+}
+
+#trust-notif.show-notif {
+    opacity: 1;
+    transform: translate(-50%, -20px);
+}

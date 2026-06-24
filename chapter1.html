@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 - Pesan Pertama</title>
+
+    <link rel="stylesheet" href="chapter1.css">
+</head>
+<body>
+
+    <div id="game">
+
+        <img
+            id="sceneImage"
+            class="scene-image"
+            src="assets/scene1.png"
+            alt="scene">
+
+        <div class="overlay"></div>
+
+        <div class="dialog-box">
+
+            <div id="speaker">
+                Narasi
+            </div>
+
+            <div id="dialogText"></div>
+
+            <button id="nextBtn">
+                ▶ Lanjut
+            </button>
+
+            <button id="btnNextChapter" style="display:none">Lanjut ke Chapter 2 ➔</button>
+
+        </div>
+
+        <div id="choiceContainer">
+
+            <button class="choice" data-type="cepat">
+                 Balas Sekarang Juga
+            </button>
+
+            <button class="choice" data-type="santai">
+                 Balas Santai aja
+            </button>
+
+            <button class="choice" data-type="nanti">
+                 Nanti aja deh
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="chapter1.js"></script>
+
+</body>
+</html>

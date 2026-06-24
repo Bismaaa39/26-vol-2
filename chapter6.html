@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6 - Rintangan Hubungan</title>
+    <link rel="stylesheet" href="chapter6.css">
+</head>
+<body>
+
+    <div id="new-background"></div>
+
+    <div class="container" id="prolog-container">
+        <div id="text-container">
+            <p id="story-text"></p>
+        </div>
+    </div>
+
+    <div id="puzzle-container" style="display: none;">
+        <svg id="line-svg"></svg>
+        
+        <div class="nodes-wrapper">
+            <div class="column problems">
+                <div class="node-wrapper">
+                    <div class="node-label">Kurang komunikasi</div>
+                    <div class="node problem-node" data-id="p1" data-match="s1"></div>
+                </div>
+                <div class="node-wrapper">
+                    <div class="node-label">Sibuk sekolah</div>
+                    <div class="node problem-node" data-id="p2" data-match="s2"></div>
+                </div>
+                <div class="node-wrapper">
+                    <div class="node-label">Salah paham</div>
+                    <div class="node problem-node" data-id="p3" data-match="s3"></div>
+                </div>
+            </div>
+
+            <div class="column solutions">
+                <div class="node-wrapper">
+                    <div class="node solution-node" data-id="s1"></div>
+                    <div class="node-label">Mengobrol baik-baik</div>
+                </div>
+                <div class="node-wrapper">
+                    <div class="node solution-node" data-id="s2"></div>
+                    <div class="node-label">Memberikan dukungan</div>
+                </div>
+                <div class="node-wrapper">
+                    <div class="node solution-node" data-id="s3"></div>
+                    <div class="node-label">Mendengarkan penjelasan</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="trust-notif" class="hidden">❤️ Trust +10</div>
+
+    <div class="dialog-box" id="dialogBox" style="display: none;">
+        <div id="speaker">Narasi-Pupu</div>
+        <div id="dialogText"></div>
+        <button id="nextBtn">▶ Lanjut</button>
+    </div>
+
+    <script src="chapter6.js"></script>
+</body>
+</html>

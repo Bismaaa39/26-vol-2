@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8 - Masa Depan</title>
+    <link rel="stylesheet" href="chapter8.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="text-container">
+            <p id="story-text"></p>
+        </div>
+    </div>
+
+    <div id="new-background"></div>
+
+    <div id="choice-container" style="display: none;">
+        <button class="choice-btn" id="choicePupu">Traveling (Pupu)</button>
+        <button class="choice-btn" id="choiceBinyu">Traveling (Binyu)</button>
+        <button class="choice-btn" id="choiceMenikah">Merit??? PFT</button>
+        <button class="choice-btn" id="choiceRumah">Rumah Bersama</button>
+        <button class="choice-btn" id="choiceBobok">Bobok</button>
+    </div>
+
+    <div class="dialog-box" id="dialogBox" style="display: none;">
+        <div id="speaker">Narasi</div>
+        <div id="dialogText"></div>
+        <button id="nextBtn">▶ Lanjut</button>
+    </div>
+
+    <div id="epilogue-container" style="display: none;">
+        <p id="epilogue-text"></p>
+    </div>
+
+    <div id="video-container" style="display: none;">
+        <iframe id="youtube-video" width="640" height="360" src="https://www.youtube.com/embed/aZ7pqZbfY0c" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button id="showFinalBtn" class="choice-btn" style="margin-top: 30px;">Lanjut➔</button>
+    </div>
+
+    <div id="final-container" style="display: none;">
+        <h2>Terima Kasih Hun...</h2>
+        <p class="final-desc">Scan kode QR atau klik tombol di bawah.</p>
+        
+        <img src="assets/qr_code.png" alt="QR Code Google Drive" id="qr-code">
+        
+        <a href="https://drive.google.com/drive/folders/1DPTX_KvTx80lkhcj4vK1BZSDhD-FadIW?usp=sharing" target="_blank" class="drive-btn">Buka Google Drive</a>
+    </div>
+
+    <script src="chapter8.js"></script>
+</body>
+</html>
